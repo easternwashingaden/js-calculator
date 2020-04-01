@@ -1,11 +1,11 @@
 const exampleAdditionInput = {
-  num1: "a",
+  num1: 5,
   num2: 3,
-  operation: "/"
+  operation: "*"
 }
 
 //create a function that validate the input option 
-const is_valid = function(input){
+const isValid = function(input){
   if (typeof input.num1 !== "number" ||typeof input.num2 !== "number"){
     throw "You have entered an invalid input, num1 and num2 must be a number"; 
   } 
@@ -13,7 +13,7 @@ const is_valid = function(input){
 
 //create a calculate function
 const calculator = function(input){
-  is_valid(input);
+  isValid(input);
   switch(input.operation){
     case 'add':
     case '+':
@@ -44,6 +44,6 @@ try {
   calculator(exampleAdditionInput);
 }
 
-catch(calculator_exception){
-  console.log(calculator_exception);
+catch(calculatorException){
+  console.log(calculatorException);
 }
